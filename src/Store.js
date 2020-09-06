@@ -6,10 +6,10 @@ const uid = require('uid');
 /**
  * The options for the store constructor
  * @typedef {Object} StoreOptions
- * @property {String} name The name of the store's data collection. Use a different name per collection to keep data seperate.
- * @property {String} path The full path to indicate where to store the .json data file
- * @property {Boolean} backupEnabled Whether to enable the scheduled backups or not
- * @property {Number} backupInterval The interval to run the scheduled backups at, in milliseconds 
+ * @property {String} [name] The name of the store's data collection. Use a different name per collection to keep data seperate.
+ * @property {String} [path] The full path to indicate where to store the .json data file
+ * @property {Boolean} [backupEnabled] Whether to enable the scheduled backups or not
+ * @property {Number} [backupInterval] The interval to run the scheduled backups at, in milliseconds 
  */
 const defaultStoreOpts = {
     name: 'data',
@@ -21,7 +21,7 @@ const defaultStoreOpts = {
 /**
  * The options for the 'only' filter
  * @typedef {Object} FilterOptions
- * @property {Boolean} [strict = false] Whether to be strict on string matching. If true, strings will be exactly matched, if false, capitalization will be ignored.
+ * @property {Boolean} [strict=false] Whether to be strict on string matching. If true, strings will be exactly matched, if false, capitalization will be ignored.
  */
 const defaultFilterOpts = {
     strict: false
@@ -160,7 +160,7 @@ class Store extends EventEmitter.EventEmitter {
     }
 
     /**
-     * Entire an item in the store exists, adding it if it doesn't
+     * Ensures an item in the store exists, adding it if it doesn't
      * @param {Object | Function | String} filter Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID
      * @param {Object} item The item to add to the store, if it doesn't exist
      * @return {Boolean | Number} A boolean indicating whether the item exists or was added
