@@ -1,0 +1,20 @@
+{
+  "name": "store",
+  "version": "1.0.0",
+  "description": "A simple, persistent JSON storage model",
+  "main": "src/index.js",
+  "author": "ThatTonybo <thattonybo@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "ava",
+    "docs": "jsdoc -c jsdoc.json -p package.json -r README.md"
+	},
+  "dependencies": {
+    "timequeue": "^2.0.2",
+    "uid": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^3.11.1"
+  }
+}
