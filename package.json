@@ -6,6 +6,7 @@
   "author": "ThatTonybo <thattonybo@gmail.com>",
   "license": "MIT",
   "private": false,
+  "types": "index.d.ts",
   "scripts": {
     "test": "ava",
     "docs": "jsdoc -c jsdoc.json -p package.json -r README.md"
