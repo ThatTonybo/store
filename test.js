@@ -20,7 +20,7 @@ test.todo(`listening for 'restore' event`);
 test.todo(`add a single item`);
 test.todo(`add multiple items`);
 test.todo(`get item using id`);
-test.todo(`check that an item exists using has() method`); // TODO: needs to be added
+test.todo(`check that an item exists using has() method`);
 test.todo(`backup the store`);
 test.todo(`filter using only() method`);
 test.todo(`filter using filter() method`);
@@ -32,9 +32,9 @@ test.todo(`restore from a backup`);
 test.todo(`delete an item`);
 
 // advanced
-test.todo(`edit an item using upsert() method (on existing item)`); // TODO: needs to be added
-test.todo(`edit an item using upsert() method (on non-existent item)`); // TODO: needs to be added
-test.todo(`ensure an item exists`); // TODO: needs to be added
+test.todo(`edit an item using upsert() method (on existing item)`);
+test.todo(`edit an item using upsert() method (on non-existent item)`);
+test.todo(`ensure an item exists`);
 test.todo(`sweep the store`);
 
 // extra
