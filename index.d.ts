@@ -1,4 +1,4 @@
-declare module '@ecoleaf/store' {
+declare module 'thattonybo/store' {
   import { EventEmitter } from 'events';
   import TimedQueue from 'timequeue';
 
