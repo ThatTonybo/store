@@ -34,6 +34,9 @@ class Store extends EventEmitter.EventEmitter {
     /**
      * Create a new store
      * @param {StoreOptions} [opts] The options for the store
+     * 
+     * @example <caption>Create a new store</caption>
+     * new Store(opts)
      */
     constructor(opts = defaultStoreOpts) {
         super();
@@ -66,6 +69,14 @@ class Store extends EventEmitter.EventEmitter {
      * @param {Object | Array<Object>} vals An object or an array of objects to add to the store
      * @returns {String | Array<String>} The ID of the item added, or an array of IDs belonging to the items added
      * @fires Store#added
+     * 
+     * @example <caption>Add a single item</caption>
+     * Store.add({ my: 'item' })
+     * @example <caption>Add multiple items</caption>
+     * Store.add([
+     *  { item: '1' },
+     *  { item: '2' }
+     * ])
      */
     add(vals) {
         return new Promise(async (resolve, reject) => {
@@ -136,7 +147,10 @@ class Store extends EventEmitter.EventEmitter {
     /**
      * Get an item from the store
      * @param {String} id The ID of the item to get from the store
-     * @returns {Object | undefined} The item that belongs to that ID, or undefined if none is found 
+     * @returns {Object | undefined} The item that belongs to that ID, or undefined if none is found
+     * 
+     * @example <caption>Get an item using it's ID</caption>
+     * Store.get('2xuxhuoyd5h5563v')
      */
     get(id) {
         return new Promise(async (resolve, reject) => {
@@ -152,6 +166,12 @@ class Store extends EventEmitter.EventEmitter {
      * Indicates if a specific item how many items exist that match a provided filter
      * @param {Object | Function | String} filter Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID
      * @returns {Boolean | Number} Either a boolean indicating if an item is found, or a number indicating how many items matching the filter were found
+     * 
+     * @example <caption>Check if an item exists using a filter object</caption>
+     * Store.has({ myProp: 'myVal' })
+     * 
+     * @example <caption>Check if an item exists using an item's ID</caption>
+     * Store.has('2xuxhuoyd5h5563v')
      */
     has(filter) {
         return new Promise(async (resolve, reject) => {
@@ -165,6 +185,12 @@ class Store extends EventEmitter.EventEmitter {
      * @param {Object} item The item to add to the store, if it doesn't exist
      * @return {Boolean | Number} A boolean indicating whether the item exists or was added
      * @fires Store#added
+     * 
+     * @example <caption>Ensure an item exists using a filter object</caption>
+     * Store.ensure({ myProp: 'myVal' }, { myProp: 'myVal' })
+     * 
+     * @example <caption>Ensure an item exists using an item's ID</caption>
+     * Store.ensure('2xuxhuoyd5h5563v', { myProp: 'myVal' })
      */
     ensure(filter, item) {
         return new Promise(async (resolve, reject) => {
@@ -175,6 +201,9 @@ class Store extends EventEmitter.EventEmitter {
     /**
      * Get all items from the store
      * @returns {Array<Object>} An array of items in the store
+     * 
+     * @example <caption>Get all items from the store as an array of objects</caption>
+     * Store.all()
      */
     all() {
         return new Promise(async (resolve, reject) => {
@@ -190,6 +219,9 @@ class Store extends EventEmitter.EventEmitter {
     /**
      * Get all items from the store, in raw object (key- > value) form
      * @returns {Object} An object of items in the store
+     *
+     * @example <caption>Get all items from the store as a ID mapped object</caption>
+     * Store.object()
      */
     object() {
         return new Promise(async (resolve, reject) => {
@@ -207,6 +239,9 @@ class Store extends EventEmitter.EventEmitter {
      * @param {Object} obj An object containing the keys/values to filter by
      * @param {FilterOptions} [opts] The options for the filter
      * @returns {Array<Object>} An array of items in the store that matched the filter
+     * 
+     * @example <caption>Get all items from the store that match a filter object</caption>
+     * Store.only({ myProp: 'myVal' })
      */
     only(obj, opts = defaultFilterOpts) {
         return new Promise(async (resolve, reject) => {
@@ -240,6 +275,9 @@ class Store extends EventEmitter.EventEmitter {
      * Get all items from the store that match a function filter
      * @param {Function} func A function that returns a truthy value for items that match the filter
      * @returns {Array<Object>} An array of items in the store that matched the filter
+     * 
+     * @example <caption>Get all items from the store that match a filter function</caption>
+     * Store.filter((item) => item.myProp === 'myVal')
      */
     filter(func) {
         return new Promise(async (resolve, reject) => {
@@ -255,6 +293,9 @@ class Store extends EventEmitter.EventEmitter {
      * Filters all items from the store that match a function filter, but only returns the first match
      * @param {Function} func A function that returns a truthy value for the item that matches the filter
      * @returns {Object | undefined} The item itself, or undefined if the item doesn't exist
+     * 
+     * @example <caption>Get the first item from the store that matchs a filter function</caption>
+     * Store.first((item) => item.myProp === 'myVal')
      */
     first(func) {
         return new Promise(async (resolve, reject) => {
@@ -272,6 +313,12 @@ class Store extends EventEmitter.EventEmitter {
      * @param {Object} newValues An object of keys/values to add, edit or remove to/from the item
      * @returns {Boolean | undefined} A boolean indicating the result of the action, or undefined if the item doesn't exist
      * @fires Store#edited
+     * 
+     * @example <caption>Edit an item using a filter object</caption>
+     * Store.edit({ myProp: 'myVal' }, { myProp: 'myNewVal', myNewVal: 'anotherNewVal' })
+     * 
+     * @example <caption>Edit an item using an item's ID</caption>
+     * Store.edit('2xuxhuoyd5h5563v', { myProp: 'myNewVal', myNewVal: 'anotherNewVal' })
      */
     edit(key, newValues) {
         return new Promise(async (resolve, reject) => {
@@ -322,6 +369,12 @@ class Store extends EventEmitter.EventEmitter {
      * @returns {Boolean | undefined} A boolean indicating the result of the action
      * @fires Store#added
      * @fires Store#edited
+     * 
+     * @example <caption>Upsert an item using a filter object</caption>
+     * Store.upsert({ myProp: 'myVal' }, { myProp: 'myVal', myNewVal: 'anotherNewVal' })
+     * 
+     * @example <caption>Edit an item using an item's ID</caption>
+     * Store.upsert('2xuxhuoyd5h5563v', { myProp: 'myVal', myNewVal: 'anotherNewVal' })
      */
     upsert(key, newValues) {
         return new Promise(async (resolve, reject) => {
@@ -335,6 +388,12 @@ class Store extends EventEmitter.EventEmitter {
      * @param {Object} value The new object to replace the existing item in the store with
      * @returns {Boolean | undefined} A boolean indicating the result of the action, or undefined if the item doesn't exist
      * @fires Store#replaced
+     * 
+     * @example <caption>Replace an item using a filter object</caption>
+     * Store.replace({ myProp: 'myVal' }, { myNewestProp: 'myNewestVal' })
+     * 
+     * @example <caption>Edit an item using an item's ID</caption>
+     * Store.replace('2xuxhuoyd5h5563v', { myNewestProp: 'myNewestVal' })
      */
     replace(key, value) {
         return new Promise(async (resolve, reject) => {
@@ -378,6 +437,9 @@ class Store extends EventEmitter.EventEmitter {
      * Iterates ofer all items in the store and deletes items that match a filter provided
      * @param {Function | Object} filter Either an object containing the keys/values to filter by, or a filter function that returns a truthy value
      * @returns {Number} A number indicating how many items were deleted from the store
+     * 
+     * @example <caption>Sweep the store using a filter object</caption>
+     * Store.sweep({ myProp: 'myVal' })
      */
     sweep(filter) {
         return new Promise(async (resolve, reject) => {
@@ -412,6 +474,12 @@ class Store extends EventEmitter.EventEmitter {
      * @param {Function | Object | String} key Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID
      * @returns {Boolean | undefined} A boolean indicating the result of the action, or undefined if the item doesn't exist
      * @fires Store#deleted
+     * 
+     * @example <caption>Delete an item using a filter object</caption>
+     * Store.delete({ myProp: 'myVal' })
+     * 
+     * @example <caption>Delete an item using an item's ID</caption>
+     * Store.delete('2xuxhuoyd5h5563v')
      */
     delete(key) {
         return new Promise(async (resolve, reject) => {
@@ -448,6 +516,9 @@ class Store extends EventEmitter.EventEmitter {
      * Deletes all items from the store
      * @returns {Boolean} A boolean indicating the result of the action
      * @fires Store#emptied
+     * 
+     * @example <caption>Empty the store</caption>
+     * Store.empty()
      */
     empty() {
         return new Promise(async (resolve, reject) => {
@@ -472,6 +543,9 @@ class Store extends EventEmitter.EventEmitter {
      * @param {'file' | 'folder'} type The type to ensure exists
      * @param {String} dir The full path or full path and filename to ensure exists
      * @returns {Boolean} A boolean indicating the result of the action
+     * 
+     * @example <caption>Ensure the data directory exists</caption>
+     * Store._ensureCreated('folder', this.opts.path)
      */
     _ensureCreated(type, dir) {
         const exists = fs.existsSync(dir);
@@ -493,6 +567,9 @@ class Store extends EventEmitter.EventEmitter {
      * Helper to check if a variable is an object
      * @param {*} obj Any variable to check
      * @returns {Boolean} A boolean indicating whether the variable is an object or not
+     * 
+     * @example <caption>Check if a variable is an object</caption>
+     * Store._isObject(['array'])
      */
     _isObject(obj) {
         return Object.prototype.toString.call(obj) === '[object Object]';
@@ -503,6 +580,12 @@ class Store extends EventEmitter.EventEmitter {
      * @private
      * @param {Object | Function | String} filter Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID
      * @returns {String | undefined} The ID of the item, or undefined if none can be found
+     * 
+     * @example <caption>Get an item ID using a filter object</caption>
+     * Store._get({ myProp: 'myVal' })
+     * 
+     * @example <caption>Get an item ID using an item's ID</caption>
+     * Store._get('2xuxhuoyd5h5563v')
      */
     _get(filter) {
         return new Promise(async (resolve, reject) => {
@@ -534,6 +617,9 @@ class Store extends EventEmitter.EventEmitter {
      * Start the scheduled backups, using the store's backupInterval option
      * @returns {Boolean} A boolean indicating the result of the action
      * @fires Store#backupsStarted
+     * 
+     * @example <caption>Start scheduled backups</caption>
+     * Store.startBackups()
      */
     startBackups() {
         return new Promise(async (resolve, reject) => {
@@ -556,6 +642,9 @@ class Store extends EventEmitter.EventEmitter {
      * Stop the scheduled backups
      * @returns {Boolean} A boolean indicating the result of the action
      * @fires Store#backupsStopped
+     * 
+     * @example <caption>Stop scheduled backups</caption>
+     * Store.stopBackups()
      */
     stopBackups() {
         return new Promise(async (resolve, reject) => {
@@ -580,6 +669,9 @@ class Store extends EventEmitter.EventEmitter {
      * @param {Boolean} [scheduled=false] A boolean indicating whether the backup is made by the scheduled backup interval or manually
      * @returns {Boolean} A boolean indicating the result of the action
      * @fires Store#backup 
+     * 
+     * @example <caption>Make a backup of the store</caption>
+     * Store.backup()
      */
     backup(scheduled = false) {
         return new Promise((resolve, reject) => {
@@ -608,6 +700,9 @@ class Store extends EventEmitter.EventEmitter {
      * Replace the store's contents with the contents of an earlier or previous backup
      * @returns {Boolean} A boolean indicating the result of the action
      * @fires Store#restore
+     * 
+     * @example <caption>Restore the store from backup</caption>
+     * Store.restore()
      */
     restore() {
         return new Promise((resolve, reject) => {
