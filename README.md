@@ -1,5 +1,9 @@
-# 🍃 Store
-Store is a simple, persistent JSON data storage model, with simple filtering and data protection
+<div align="center">
+    <img src="https://i.imgur.com/4hzwG5A.png" width="300" height="auto" />
+    <br />
+    Store is a simple, persistent JSON data storage model, with simple filtering and data protection
+    <hr />
+</div>
 
 ## Features
 - Simple, powerful data management and filtering
