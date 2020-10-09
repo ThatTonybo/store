@@ -1,0 +1,5253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Store</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Store</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>Store<span class="signature">(opts<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">The store class</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="Store"><span class="type-signature"></span>new Store<span class="signature">(opts<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Create a new store
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#StoreOptions">StoreOptions</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The options for the store</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line41">line 41</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Create a new store</p>
+    
+    <pre class="prettyprint"><code>new Store(opts)</code></pre>
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="_ensureCreated"><span class="type-signature">(private) </span>_ensureCreated<span class="signature">(type, dir)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Ensure a directory or file has been created and exists
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">'file'</span>
+|
+
+<span class="param-type">'folder'</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The type to ensure exists</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dir</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full path or full path and filename to ensure exists</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line550">line 550</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Ensure the data directory exists</p>
+    
+    <pre class="prettyprint"><code>Store._ensureCreated('folder', this.opts.path)</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="_get"><span class="type-signature">(private) </span>_get<span class="signature">(filter)</span><span class="type-signature"> &rarr; {String|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Helper to simplify fetching an item's ID using multiple filter methods
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">function</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line590">line 590</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The ID of the item, or undefined if none can be found
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Get an item ID using a filter object</p>
+    
+    <pre class="prettyprint"><code>Store._get({ myProp: 'myVal' })</code></pre>
+
+        <p class="code-caption">Get an item ID using an item's ID</p>
+    
+    <pre class="prettyprint"><code>Store._get('2xuxhuoyd5h5563v')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="_isObject"><span class="type-signature"></span>_isObject<span class="signature">(obj)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Helper to check if a variable is an object
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Any variable to check</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line574">line 574</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating whether the variable is an object or not
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Check if a variable is an object</p>
+    
+    <pre class="prettyprint"><code>Store._isObject(['array'])</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="add"><span class="type-signature"></span>add<span class="signature">(vals)</span><span class="type-signature"> &rarr; {String|Array.&lt;String>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Adds a new object to the store
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>vals</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">Array.&lt;Object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An object or an array of objects to add to the store</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line81">line 81</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:added">Store#event:added</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The ID of the item added, or an array of IDs belonging to the items added
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Array.&lt;String></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Add a single item</p>
+    
+    <pre class="prettyprint"><code>Store.add({ my: 'item' })</code></pre>
+
+        <p class="code-caption">Add multiple items</p>
+    
+    <pre class="prettyprint"><code>Store.add([ { item: '1' }, { item: '2' }])</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="all"><span class="type-signature"></span>all<span class="signature">()</span><span class="type-signature"> &rarr; {Array.&lt;Object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Get all items from the store
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line208">line 208</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    An array of items in the store
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;Object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get all items from the store as an array of objects</p>
+    
+    <pre class="prettyprint"><code>Store.all()</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="backup"><span class="type-signature"></span>backup<span class="signature">(scheduled<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Create a backup of the store
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scheduled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last">A boolean indicating whether the backup is made by the scheduled backup interval or manually</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line676">line 676</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:backup">Store#event:backup</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Make a backup of the store</p>
+    
+    <pre class="prettyprint"><code>Store.backup()</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="delete"><span class="type-signature"></span>delete<span class="signature">(key)</span><span class="type-signature"> &rarr; {Boolean|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Delete an item from the store
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line484">line 484</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:deleted">Store#event:deleted</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action, or undefined if the item doesn't exist
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Delete an item using a filter object</p>
+    
+    <pre class="prettyprint"><code>Store.delete({ myProp: 'myVal' })</code></pre>
+
+        <p class="code-caption">Delete an item using an item's ID</p>
+    
+    <pre class="prettyprint"><code>Store.delete('2xuxhuoyd5h5563v')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="edit"><span class="type-signature"></span>edit<span class="signature">(key, newValues)</span><span class="type-signature"> &rarr; {Boolean|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Edit an item in the store
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>newValues</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An object of keys/values to add, edit or remove to/from the item</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line323">line 323</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:edited">Store#event:edited</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action, or undefined if the item doesn't exist
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Edit an item using a filter object</p>
+    
+    <pre class="prettyprint"><code>Store.edit({ myProp: 'myVal' }, { myProp: 'myNewVal', myNewVal: 'anotherNewVal' })</code></pre>
+
+        <p class="code-caption">Edit an item using an item's ID</p>
+    
+    <pre class="prettyprint"><code>Store.edit('2xuxhuoyd5h5563v', { myProp: 'myNewVal', myNewVal: 'anotherNewVal' })</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="empty"><span class="type-signature"></span>empty<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Deletes all items from the store
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line523">line 523</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:emptied">Store#event:emptied</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Empty the store</p>
+    
+    <pre class="prettyprint"><code>Store.empty()</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="ensure"><span class="type-signature"></span>ensure<span class="signature">(filter, item)</span><span class="type-signature"> &rarr; {Boolean|Number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Ensures an item in the store exists, adding it if it doesn't
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">function</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>item</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The item to add to the store, if it doesn't exist</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line195">line 195</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:added">Store#event:added</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating whether the item exists or was added
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+|
+
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Ensure an item exists using a filter object</p>
+    
+    <pre class="prettyprint"><code>Store.ensure({ myProp: 'myVal' }, { myProp: 'myVal' })</code></pre>
+
+        <p class="code-caption">Ensure an item exists using an item's ID</p>
+    
+    <pre class="prettyprint"><code>Store.ensure('2xuxhuoyd5h5563v', { myProp: 'myVal' })</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="filter"><span class="type-signature"></span>filter<span class="signature">(func)</span><span class="type-signature"> &rarr; {Array.&lt;Object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Get all items from the store that match a function filter
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A function that returns a truthy value for items that match the filter</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line282">line 282</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    An array of items in the store that matched the filter
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;Object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get all items from the store that match a filter function</p>
+    
+    <pre class="prettyprint"><code>Store.filter((item) => item.myProp === 'myVal')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="first"><span class="type-signature"></span>first<span class="signature">(func)</span><span class="type-signature"> &rarr; {Object|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Filters all items from the store that match a function filter, but only returns the first match
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A function that returns a truthy value for the item that matches the filter</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line300">line 300</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The item itself, or undefined if the item doesn't exist
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get the first item from the store that matchs a filter function</p>
+    
+    <pre class="prettyprint"><code>Store.first((item) => item.myProp === 'myVal')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="get"><span class="type-signature"></span>get<span class="signature">(id)</span><span class="type-signature"> &rarr; {Object|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Get an item from the store
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the item to get from the store</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line155">line 155</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The item that belongs to that ID, or undefined if none is found
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get an item using it's ID</p>
+    
+    <pre class="prettyprint"><code>Store.get('2xuxhuoyd5h5563v')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="has"><span class="type-signature"></span>has<span class="signature">(filter)</span><span class="type-signature"> &rarr; {Boolean|Number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Indicates if a specific item how many items exist that match a provided filter
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">function</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line176">line 176</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Either a boolean indicating if an item is found, or a number indicating how many items matching the filter were found
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+|
+
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Check if an item exists using a filter object</p>
+    
+    <pre class="prettyprint"><code>Store.has({ myProp: 'myVal' })</code></pre>
+
+        <p class="code-caption">Check if an item exists using an item's ID</p>
+    
+    <pre class="prettyprint"><code>Store.has('2xuxhuoyd5h5563v')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="object"><span class="type-signature"></span>object<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Get all items from the store, in raw object (key- > value) form
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line226">line 226</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    An object of items in the store
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get all items from the store as a ID mapped object</p>
+    
+    <pre class="prettyprint"><code>Store.object()</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="only"><span class="type-signature"></span>only<span class="signature">(obj, opts<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array.&lt;Object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Get all items from the store that match an object (key -> value) filter
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An object containing the keys/values to filter by</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#FilterOptions">FilterOptions</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The options for the filter</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line246">line 246</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    An array of items in the store that matched the filter
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;Object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Get all items from the store that match a filter object</p>
+    
+    <pre class="prettyprint"><code>Store.only({ myProp: 'myVal' })</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="replace"><span class="type-signature"></span>replace<span class="signature">(key, value)</span><span class="type-signature"> &rarr; {Boolean|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Replace an item in the store entirely
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The new object to replace the existing item in the store with</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line398">line 398</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:replaced">Store#event:replaced</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action, or undefined if the item doesn't exist
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Replace an item using a filter object</p>
+    
+    <pre class="prettyprint"><code>Store.replace({ myProp: 'myVal' }, { myNewestProp: 'myNewestVal' })</code></pre>
+
+        <p class="code-caption">Edit an item using an item's ID</p>
+    
+    <pre class="prettyprint"><code>Store.replace('2xuxhuoyd5h5563v', { myNewestProp: 'myNewestVal' })</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="restore"><span class="type-signature"></span>restore<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Replace the store's contents with the contents of an earlier or previous backup
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line707">line 707</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:restore">Store#event:restore</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Restore the store from backup</p>
+    
+    <pre class="prettyprint"><code>Store.restore()</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="startBackups"><span class="type-signature"></span>startBackups<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Start the scheduled backups, using the store's backupInterval option
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line624">line 624</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:backupsStarted">Store#event:backupsStarted</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Start scheduled backups</p>
+    
+    <pre class="prettyprint"><code>Store.startBackups()</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="stopBackups"><span class="type-signature"></span>stopBackups<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Stop the scheduled backups
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line649">line 649</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:backupsStopped">Store#event:backupsStopped</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Stop scheduled backups</p>
+    
+    <pre class="prettyprint"><code>Store.stopBackups()</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="sweep"><span class="type-signature"></span>sweep<span class="signature">(filter)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Iterates ofer all items in the store and deletes items that match a filter provided
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing the keys/values to filter by, or a filter function that returns a truthy value</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line444">line 444</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A number indicating how many items were deleted from the store
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Sweep the store using a filter object</p>
+    
+    <pre class="prettyprint"><code>Store.sweep({ myProp: 'myVal' })</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="upsert"><span class="type-signature"></span>upsert<span class="signature">(key, newValues)</span><span class="type-signature"> &rarr; {Boolean|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    A combination function that edits an existing item, or adds a new item if it doesn't exist in the store
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>newValues</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An object of keys/values to add, edit or remove to/from the item. If the item doesn't exist and is added, only keys with a truthy value are added.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line379">line 379</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<h5>Fires:</h5>
+<ul>
+    <li><a href="Store.html#event:added">Store#event:added</a></li>
+
+    <li><a href="Store.html#event:edited">Store#event:edited</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A boolean indicating the result of the action
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+        <p class="code-caption">Upsert an item using a filter object</p>
+    
+    <pre class="prettyprint"><code>Store.upsert({ myProp: 'myVal' }, { myProp: 'myVal', myNewVal: 'anotherNewVal' })</code></pre>
+
+        <p class="code-caption">Edit an item using an item's ID</p>
+    
+    <pre class="prettyprint"><code>Store.upsert('2xuxhuoyd5h5563v', { myProp: 'myVal', myNewVal: 'anotherNewVal' })</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:added">added</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fires when a new item is added to the store
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">Array.&lt;Object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The item added, or an array of the items added</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line107">line 107</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:added">added</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fires when a new item is added to the store
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">Array.&lt;Object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The item added, or an array of the items added</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line133">line 133</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:backup">backup</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fires when a new backup has been made
+</div>
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full path and filename, indicating where the backup is located</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scheduled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A boolean indicating whether the backup is scheduled or not</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line681">line 681</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:backupsStarted">backupsStarted</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fires when scheduled backups are started
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line630">line 630</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:backupsStopped">backupsStopped</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fires when scheduled backups are stopped
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line656">line 656</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:deleted">deleted</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fires when an item from the store is deleted
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>oldItem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The item deleted from the store</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line501">line 501</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:edited">edited</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fired when an item in the store is edited
+</div>
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>old</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value of the item before the edit</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>new</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value of the item after the edit</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line347">line 347</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:emptied">emptied</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fires when the store is emptied
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line528">line 528</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:replaced">replaced</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fired when an item in the store is replaced with a new item
+</div>
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>old</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value of the item before the replace</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>new</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value of the item after the replace</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line417">line 417</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:restore">restore</h4>
+    
+
+    
+
+
+
+<div class="description">
+    Fires when the store has been restored from a backup
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Store.js.html">Store.js</a>, <a href="Store.js.html#line724">line 724</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Store.html">Store</a></li></ul><h3>Events</h3><ul><li><a href="Store.html#event:added">added</a></li><li><a href="Store.html#event:backup">backup</a></li><li><a href="Store.html#event:backupsStarted">backupsStarted</a></li><li><a href="Store.html#event:backupsStopped">backupsStopped</a></li><li><a href="Store.html#event:deleted">deleted</a></li><li><a href="Store.html#event:edited">edited</a></li><li><a href="Store.html#event:emptied">emptied</a></li><li><a href="Store.html#event:replaced">replaced</a></li><li><a href="Store.html#event:restore">restore</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Sat Oct 10 2020 07:56:15 GMT+1100 (Australian Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
