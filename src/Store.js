@@ -175,7 +175,7 @@ class Store extends EventEmitter.EventEmitter {
      */
     has(key) {
         return new Promise(async (resolve, reject) => {
-            const item
+            
         });
     }
 
@@ -194,7 +194,15 @@ class Store extends EventEmitter.EventEmitter {
      */
     ensure(key, item) {
         return new Promise(async (resolve, reject) => {
-            // TODO: ensure
+            const id = await this._get(key);
+
+            if (!id) {
+                await this.add(item);
+                return resolve(item);
+            } else {
+                const data = this.get(id);
+                return resolve(data);
+            }
         });
     }
 
@@ -208,7 +216,12 @@ class Store extends EventEmitter.EventEmitter {
     all() {
         return new Promise(async (resolve, reject) => {
             this.queue.push(() => {
-                const data = fs.readFileSync(`${this.opts.path}/${this.opts.name}.json`, 'utf8');
+                let data = fs.readFileSync(`${this.opts.path}/${this.opts.name}.json`, 'utf8');
+
+                if (data.toString() === '') {
+                    // TODO: write to file if file is empty (add "{}")
+                }
+
                 return JSON.parse(data.toString());
             }, (data) => {
                 resolve(Object.values(data));
