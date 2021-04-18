@@ -164,7 +164,7 @@ class Store extends EventEmitter.EventEmitter {
 
     /**
      * Indicates if a specific item how many items exist that match a provided filter
-     * @param {Object | Function | String} filter Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID
+     * @param {Object | Function | String} key Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID
      * @returns {Boolean | Number} Either a boolean indicating if an item is found, or a number indicating how many items matching the filter were found
      * 
      * @example <caption>Check if an item exists using a filter object</caption>
@@ -173,15 +173,15 @@ class Store extends EventEmitter.EventEmitter {
      * @example <caption>Check if an item exists using an item's ID</caption>
      * Store.has('2xuxhuoyd5h5563v')
      */
-    has(filter) {
+    has(key) {
         return new Promise(async (resolve, reject) => {
-            // TODO: has
+            const item
         });
     }
 
     /**
      * Ensures an item in the store exists, adding it if it doesn't
-     * @param {Object | Function | String} filter Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID
+     * @param {Object | Function | String} key Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID
      * @param {Object} item The item to add to the store, if it doesn't exist
      * @return {Boolean | Number} A boolean indicating whether the item exists or was added
      * @fires Store#added
@@ -192,7 +192,7 @@ class Store extends EventEmitter.EventEmitter {
      * @example <caption>Ensure an item exists using an item's ID</caption>
      * Store.ensure('2xuxhuoyd5h5563v', { myProp: 'myVal' })
      */
-    ensure(filter, item) {
+    ensure(key, item) {
         return new Promise(async (resolve, reject) => {
             // TODO: ensure
         });
@@ -362,6 +362,7 @@ class Store extends EventEmitter.EventEmitter {
             }
         });
     }
+
     /**
      * A combination function that edits an existing item, or adds a new item if it doesn't exist in the store
      * @param {Function | Object | String} key Either an object containing the keys/values to find by, a filter function that returns a truthy value, or the item's ID
