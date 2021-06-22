@@ -175,7 +175,10 @@ class Store extends EventEmitter.EventEmitter {
      */
     has(key) {
         return new Promise(async (resolve, reject) => {
-            
+            const id = await this._get(key);
+
+            if (!id) return resolve(false);
+            else return resolve(true);
         });
     }
 
